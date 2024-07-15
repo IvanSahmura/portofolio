@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav {
+    transition: background-color 0.5s ease;
+
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    transition: 0.5s;
+}
+
+nav a:hover:not(.no-hover) {
+    background-color: #538392;
+    color: white;
+
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #ffffff5f;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+.transparent-nav {
+    background-color: white;
+}
+
+.page1 {
+    display: flex;
+    height: 100vb;
+    background: linear-gradient(to bottom, #538392, #80B9AD);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.page1 h1 {
+    font-family: sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 3s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+.page1 p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+
+
+.page1 p::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    margin: 15px auto 0;
+    transition: width 1s ease;
+}
+
+.page1 p:hover::after,
+.page1 p.show-line::after {
+    width: 100%;
+}
+
+.page2 {
+    display: flex;
+    height: 100vh;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: black;
+    padding: 20px;
+}
+
+.page2 h1 {
+    color: #538392;
+    font-family: sans-serif;
+    font-size: 3rem;
+    margin-right: 20px;
+}
+
+.page2 p {
+    text-align: left;
+    font-size: 1.2rem;
+    max-width: 400px;
+}
+
+
+.page3 {
+    display: flex;
+    height: 100vb;
+    background: linear-gradient(to bottom, #538392, #80B9AD);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.page3 h1 {
+    font-family: sans-serif;
+    font-size: 3rem;
+}
+
+
+
+.page3 p {}
+
+.page4 {
+    display: flex;
+    height: 100vh;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    text-align: center;
+    color: black;
+    padding: 20px;
+}
+
+.page4 h1 {
+    font-family: sans-serif;
+    font-size: 3rem;
+    margin-left: 20px;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.contact-list svg {
+    margin-left: 10px;
+    transition: fill 0.5s ease;
+}
+
+.contact-list svg:hover {
+    fill: #538392;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: black;
+    }
+}
+
+
+
+@keyframes showLine {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInH1 {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn4 {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInP4 {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page2 h1.munculH1 {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.page2 h1.fade-inH1 {
+    animation: fadeInH1 0.8s forwards;
+}
+
+.page2 p.muncul {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.page2 p.fade-in {
+    animation: fadeIn 0.8s forwards;
+}
+
+.page1 p.show-line::after {
+    animation: showLine 1s forwards;
+}
+
+.page3 h1.munculH1 {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.page3 h1.fade-inH1 {
+    animation: fadeInH1 0.8s forwards;
+}
+
+.page4 h1.muncul4 {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.page4 h1.fadeIn4 {
+    animation: fadeIn4 0.8s forwards;
+}
+
+
+.page4 ul.munculP4 {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.page4 ul.fadeInP4 {
+    animation: fadeInP4 0.8s forwards;
+}
+
+
+
+
+
+@media(max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .page1 h1 {
+        font-size: 2.5rem;
+    }
+
+    .page1 p {
+        font-size: 1rem;
+    }
+}
+
+@media(max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    .page1 h1 {
+        font-size: 2rem;
+    }
+
+    .page1 p {
+        font-size: 0.9rem;
+    }
+}
