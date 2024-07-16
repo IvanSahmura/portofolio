@@ -208,3 +208,9 @@ function handleIntersection3(entries) {
 
 const observer3 = new IntersectionObserver(handleIntersection3, options3);
 observer3.observe(aboutSection3);
+
+document.querySelectorAll('.box').forEach(box => {
+    box.addEventListener('click', () => {
+        box.classList.toggle('expanded');
+    });
+});
